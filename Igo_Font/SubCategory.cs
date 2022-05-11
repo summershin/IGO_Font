@@ -19,7 +19,6 @@ namespace Igo_Font
         {
             this.Products = new HashSet<Product>();
             this.Temps = new HashSet<Temp>();
-            this.TicketTypes = new HashSet<TicketType>();
         }
     
         public int SubCategoryID { get; set; }
@@ -31,7 +30,5 @@ namespace Igo_Font
         public virtual ICollection<Product> Products { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Temp> Temps { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TicketType> TicketTypes { get; set; }
     }
 }

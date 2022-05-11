@@ -23,7 +23,7 @@ namespace IGO_font
             {
                 cbx_City.Items.Add(item);
             }
-            var q1 = dbcontext.TicketTypes.Where(n => n.SubcategoryID ==1).Select(n=>n.TicketName);
+            var q1 = dbcontext.TicketTypes.Where(n => n.SubCategoryID ==1).Select(n=>n.TicketName);
             foreach (var item in q1)
             {
                 cbx_TicketType.Items.Add(item);
@@ -125,6 +125,7 @@ namespace IGO_font
             int quentity = Convert.ToInt32(dgv_ProductList.CurrentRow.Cells[5].Value);
             int buytknum = 0;
             bool a = int.TryParse(txt_BuyTkNum.Text, out buytknum);
+            int totalnum = buytknum;
             int proid = Convert.ToInt32(dgv_ProductList.CurrentRow.Cells[0].Value);
             if (!a)
             {
@@ -139,12 +140,23 @@ namespace IGO_font
             else if (ProductClass.contains(proid,cbx_TicketType.SelectedItem.ToString()))
             {
                 
-                ProductClass.items[ProductClass.indexof(proid)].quentity += buytknum;
-                if (ProductClass.items[ProductClass.indexof(proid)].quentity > quentity)
+                for(int num = 0; num < ProductClass.items.Count(); num++)
                 {
-                    ProductClass.items[ProductClass.indexof(proid)].quentity -= buytknum;
+                    if (ProductClass.items[num].productID == proid)
+                    {
+                        totalnum += ProductClass.items[num].quentity;
+                    }
+                }
+                //ProductClass.items[ProductClass.indexof(proid)].quentity += buytknum;
+                if (totalnum > quentity)
+                {
+                    //ProductClass.items[ProductClass.indexof(proid)].quentity -= buytknum;
                     MessageBox.Show("空房不足");
                     return;
+                }
+                else
+                {
+                    ProductClass.items[ProductClass.indexof(proid)].quentity += buytknum;
                 }
             }
             else
@@ -346,7 +358,10 @@ namespace IGO_font
             //    MessageBox.Show("請先選擇商品!");
             //    return;
             //}
-            for(int i = 0; i < ProductClass.items.Count; i++)
+            Random ran = new Random();
+            string s = (ran.Next(1, 1000) * ran.Next(1, 1000)).ToString();
+
+            for (int i = 0; i < ProductClass.items.Count; i++)
             {
                 var insert = new Temp
                 {
@@ -356,6 +371,7 @@ namespace IGO_font
                     TicketID = dbcontext.TicketTypes.AsEnumerable().Where(n => n.TicketName == ProductClass.items[i].ticket).Select(n => n.TicketID).FirstOrDefault(),
                     Quantity = ProductClass.items[i].quentity,
                     TotalPrice = ProductClass.items[i].price,
+                    TempOrder = s
                 };
                 dbcontext.Temps.Add(insert);
                 dbcontext.SaveChanges();

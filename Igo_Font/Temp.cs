@@ -15,17 +15,17 @@ namespace Igo_Font
     public partial class Temp
     {
         public int TempID { get; set; }
-        public Nullable<int> ProductID { get; set; }
+        public int ProductID { get; set; }
         public Nullable<int> CustomerID { get; set; }
         public Nullable<int> SubCategoryID { get; set; }
         public Nullable<int> TicketID { get; set; }
         public Nullable<int> Quantity { get; set; }
         public Nullable<decimal> TotalPrice { get; set; }
-        public Nullable<int> SeatID { get; set; }
+        public string Seats { get; set; }
+        public string TempOrder { get; set; }
     
         public virtual Customer Customer { get; set; }
         public virtual Product Product { get; set; }
-        public virtual Seat Seat { get; set; }
         public virtual SubCategory SubCategory { get; set; }
         public virtual TicketType TicketType { get; set; }
     }

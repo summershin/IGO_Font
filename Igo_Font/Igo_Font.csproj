@@ -118,9 +118,6 @@
     <Compile Include="Seat.cs">
       <DependentUpon>IgoModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="SeatAndOrder.cs">
-      <DependentUpon>IgoModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Shipper.cs">
       <DependentUpon>IgoModel.tt</DependentUpon>
     </Compile>
@@ -146,11 +143,11 @@
       <DependentUpon>IgoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Utility\ProductClass.cs" />
-    <Compile Include="慶陽\CheckOut.cs">
+    <Compile Include="慶陽\HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="慶陽\CheckOut.designer.cs">
-      <DependentUpon>CheckOut.cs</DependentUpon>
+    <Compile Include="慶陽\HomePage.designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="慶陽\Live.cs">
       <SubType>Form</SubType>
@@ -164,6 +161,36 @@
     <Compile Include="慶陽\Register.designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="昱瑋\Movie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="昱瑋\Movie.designer.cs">
+      <DependentUpon>Movie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="昱瑋\MovieSeat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="昱瑋\MovieSeat.designer.cs">
+      <DependentUpon>MovieSeat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="羿俊\CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="羿俊\CheckOut.designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="羿俊\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="羿俊\View.designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="鈞傑\Form1_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="鈞傑\Form1_Login.designer.cs">
+      <DependentUpon>Form1_Login.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,14 +203,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="慶陽\CheckOut.resx">
-      <DependentUpon>CheckOut.cs</DependentUpon>
+    <EmbeddedResource Include="慶陽\HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="慶陽\Live.resx">
       <DependentUpon>Live.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="慶陽\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="昱瑋\Movie.resx">
+      <DependentUpon>Movie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="昱瑋\MovieSeat.resx">
+      <DependentUpon>MovieSeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="羿俊\CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="羿俊\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="鈞傑\Form1_Login.resx">
+      <DependentUpon>Form1_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="IgoModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -208,9 +250,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="子慧\" />
-    <Folder Include="昱瑋\" />
-    <Folder Include="羿俊\" />
-    <Folder Include="鈞傑\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="IgoModel.Context.tt">

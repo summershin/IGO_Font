@@ -92,8 +92,7 @@ namespace IGO_font
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
-            var q = dbcontext.Customers.Select(n => n);
-            dataGridView1.DataSource = q.ToList();
+            this.Close();
         }
 
         private void txt_Phone_TextChanged(object sender, EventArgs e)

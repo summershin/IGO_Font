@@ -14,12 +14,6 @@ namespace Igo_Font
     
     public partial class OrderDetail
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public OrderDetail()
-        {
-            this.SeatAndOrders = new HashSet<SeatAndOrder>();
-        }
-    
         public int OrderDetailsID { get; set; }
         public int OrderID { get; set; }
         public Nullable<int> ProductID { get; set; }
@@ -29,7 +23,5 @@ namespace Igo_Font
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }
         public virtual TicketType TicketType { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SeatAndOrder> SeatAndOrders { get; set; }
     }
 }
