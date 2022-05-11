@@ -14,22 +14,11 @@ namespace Igo_Font
     
     public partial class Seat
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Seat()
-        {
-            this.SeatAndOrders = new HashSet<SeatAndOrder>();
-            this.Temps = new HashSet<Temp>();
-        }
-    
         public int SeatID { get; set; }
         public int ProductID { get; set; }
-        public Nullable<bool> OrderOrNot { get; set; }
         public string SeatName { get; set; }
+        public Nullable<int> OrderDetailID { get; set; }
     
         public virtual Product Product { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SeatAndOrder> SeatAndOrders { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Temp> Temps { get; set; }
     }
 }

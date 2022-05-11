@@ -1,9 +1,11 @@
 ﻿using IGO_font;
+using IGO_font.慶陽;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using 期中專題;
 
 namespace Igo_Font
 {
@@ -17,9 +19,11 @@ namespace Igo_Font
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CheckOut());
+            //Application.Run(new CheckOut());
             //Application.Run(new Live());
             //Application.Run(new Register());
+            //Application.Run(new HomePage());
+            Application.Run(new Frm_Login());
         }
     }
 }

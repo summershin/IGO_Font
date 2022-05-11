@@ -25,6 +25,8 @@ namespace Igo_Font
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Coupon> Coupons { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<Collection> Collections { get; set; }
@@ -37,15 +39,12 @@ namespace Igo_Font
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductsPhoto> ProductsPhotoes { get; set; }
         public virtual DbSet<Seat> Seats { get; set; }
-        public virtual DbSet<SeatAndOrder> SeatAndOrders { get; set; }
         public virtual DbSet<Shipper> Shippers { get; set; }
         public virtual DbSet<Status> Status { get; set; }
         public virtual DbSet<SubCategory> SubCategories { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Temp> Temps { get; set; }
         public virtual DbSet<TicketAndProduct> TicketAndProducts { get; set; }
         public virtual DbSet<TicketType> TicketTypes { get; set; }
-        public virtual DbSet<Coupon> Coupons { get; set; }
     }
 }

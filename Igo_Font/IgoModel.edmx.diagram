@@ -4,55 +4,50 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="15823b20526f43b09e44268c58ec7459" Name="Diagram1">
-        <EntityTypeShape EntityType="IGOModel.Category" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.City" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.Collection" Width="1.5" PointX="7.5" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.CollectionType" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.Customer" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.FeedbackManagement" Width="1.5" PointX="10.5" PointY="11.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.OrderDetail" Width="1.5" PointX="7.5" PointY="15.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.Order" Width="1.5" PointX="5.25" PointY="22.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.Payment" Width="1.5" PointX="3" PointY="20.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.Product" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.ProductsPhoto" Width="1.5" PointX="7.5" PointY="19.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.Seat" Width="1.5" PointX="7.5" PointY="22.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.SeatAndOrder" Width="1.5" PointX="9.75" PointY="20.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.Shipper" Width="1.5" PointX="3" PointY="22.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.Status" Width="1.5" PointX="3" PointY="25.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.SubCategory" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.Supplier" Width="1.5" PointX="3" PointY="14.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.Temp" Width="1.5" PointX="9.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.TicketAndProduct" Width="1.5" PointX="12.5" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IGOModel.TicketType" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
-        <AssociationConnector Association="IGOModel.FK_SubCategory_Category" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Products_City" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Collection_CollectionType" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Collection_Customers" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Collection_Products" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_FeedbackManagement_Customers" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Orders_Customers" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Temp_Customers" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_FeedbackManagement_Products" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_OrderDetail_Orders" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_OrderDetail_Products" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_OrderDetail_TicketTypes" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_SeatAndOrder_OrderDetail" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Orders_Payment" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Orders_Shipper" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Orders_Status" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Products_SubCategory" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Products_Supplier" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_ProductsPhoto_Products" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Seat_Products" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Temp_Products" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_TicketAndProduct_Products" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_SeatAndOrder_Seat" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Temp_Seat" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Temp_SubCategory" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_TicketTypes_SubCategory" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_Temp_TicketTypes" ManuallyRouted="false" />
-        <AssociationConnector Association="IGOModel.FK_TicketAndProduct_TicketTypes" ManuallyRouted="false" />
+      <Diagram DiagramId="15823b20526f43b09e44268c58ec7459" Name="Diagram1" ZoomLevel="40">
+        <EntityTypeShape EntityType="IGOModel.Category" Width="1.5" PointX="0.75" PointY="12.875" />
+        <EntityTypeShape EntityType="IGOModel.City" Width="1.5" PointX="3" PointY="16.25" />
+        <EntityTypeShape EntityType="IGOModel.Collection" Width="1.5" PointX="7.5" PointY="12.5" />
+        <EntityTypeShape EntityType="IGOModel.CollectionType" Width="1.5" PointX="5.25" PointY="8.875" />
+        <EntityTypeShape EntityType="IGOModel.Customer" Width="1.5" PointX="8.25" PointY="4.375" />
+        <EntityTypeShape EntityType="IGOModel.FeedbackManagement" Width="1.5" PointX="10.5" PointY="12.375" />
+        <EntityTypeShape EntityType="IGOModel.OrderDetail" Width="1.5" PointX="7.5" PointY="16.375" />
+        <EntityTypeShape EntityType="IGOModel.Order" Width="1.5" PointX="5.25" PointY="20.875" />
+        <EntityTypeShape EntityType="IGOModel.Payment" Width="1.5" PointX="3" PointY="21.75" />
+        <EntityTypeShape EntityType="IGOModel.Product" Width="1.5" PointX="5.25" PointY="11.25" />
+        <EntityTypeShape EntityType="IGOModel.ProductsPhoto" Width="1.5" PointX="7.5" PointY="20.5" />
+        <EntityTypeShape EntityType="IGOModel.Seat" Width="1.5" PointX="7.5" PointY="30.375" />
+        <EntityTypeShape EntityType="IGOModel.Shipper" Width="1.5" PointX="3" PointY="24.125" />
+        <EntityTypeShape EntityType="IGOModel.Status" Width="1.5" PointX="3" PointY="19.5" />
+        <EntityTypeShape EntityType="IGOModel.SubCategory" Width="1.5" PointX="3" PointY="12.625" />
+        <EntityTypeShape EntityType="IGOModel.Supplier" Width="1.5" PointX="3" PointY="9.5" />
+        <EntityTypeShape EntityType="IGOModel.Temp" Width="1.5" PointX="10.5" PointY="7.875" />
+        <EntityTypeShape EntityType="IGOModel.TicketAndProduct" Width="1.5" PointX="7.5" PointY="9.625" />
+        <EntityTypeShape EntityType="IGOModel.TicketType" Width="1.5" PointX="8.25" PointY="0.75" />
+        <AssociationConnector Association="IGOModel.FK_SubCategory_Category" />
+        <AssociationConnector Association="IGOModel.FK_Products_City" />
+        <AssociationConnector Association="IGOModel.FK_Collection_CollectionType" />
+        <AssociationConnector Association="IGOModel.FK_Collection_Customers" />
+        <AssociationConnector Association="IGOModel.FK_Collection_Products" />
+        <AssociationConnector Association="IGOModel.FK_FeedbackManagement_Customers" />
+        <AssociationConnector Association="IGOModel.FK_Orders_Customers" />
+        <AssociationConnector Association="IGOModel.FK_Temp_Customers" />
+        <AssociationConnector Association="IGOModel.FK_FeedbackManagement_Products" />
+        <AssociationConnector Association="IGOModel.FK_OrderDetail_Orders" />
+        <AssociationConnector Association="IGOModel.FK_OrderDetail_Products" />
+        <AssociationConnector Association="IGOModel.FK_OrderDetail_TicketTypes" />
+        <AssociationConnector Association="IGOModel.FK_Orders_Payment" />
+        <AssociationConnector Association="IGOModel.FK_Orders_Shipper" />
+        <AssociationConnector Association="IGOModel.FK_Orders_Status" />
+        <AssociationConnector Association="IGOModel.FK_Products_SubCategory" />
+        <AssociationConnector Association="IGOModel.FK_Products_Supplier" />
+        <AssociationConnector Association="IGOModel.FK_ProductsPhoto_Products" />
+        <AssociationConnector Association="IGOModel.FK_Seat_Products" />
+        <AssociationConnector Association="IGOModel.FK_Temp_Products" />
+        <AssociationConnector Association="IGOModel.FK_TicketAndProduct_Products" />
+        <AssociationConnector Association="IGOModel.FK_Temp_SubCategory" />
+        <AssociationConnector Association="IGOModel.FK_Temp_TicketTypes" />
+        <AssociationConnector Association="IGOModel.FK_TicketAndProduct_TicketTypes" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
