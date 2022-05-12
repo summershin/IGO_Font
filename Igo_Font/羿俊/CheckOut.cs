@@ -34,12 +34,19 @@ namespace IGO_font
 
             var payment = from p in dbcontext.Payments
                           select p.PayType;
+            var shipper = from s in dbcontext.Shippers
+                          select s.ShipperName;
             foreach (string item in payment)
             {
                 cmb_Payment.Items.Add(item);
             }
             cmb_Payment.SelectedIndex = 0;
 
+            foreach (string item in shipper)
+            {
+                comboBox1.Items.Add(item);
+            }
+            comboBox1.SelectedIndex= 0;
             try
             {
 
@@ -221,6 +228,9 @@ namespace IGO_font
             od.OrderDate = DateTime.Now;
             od.PayTypeID = cmb_Payment.SelectedIndex + 1;
             od.TotalPrice = Price;
+            od.ShipperID = dbcontext.Shippers.AsEnumerable().Where(n => n.ShipperName == comboBox1.SelectedItem.ToString()).Select(n => n.ShipperID).First();
+            od.ShippedDate = DateTime.Now.AddDays(3);
+            od.StatusID = 1;
             dbcontext.Orders.Add(od);
             dbcontext.SaveChanges();
 
