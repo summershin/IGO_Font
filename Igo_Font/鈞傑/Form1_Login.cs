@@ -30,11 +30,11 @@ namespace 期中專題
             string AccountID = txt_Phone.Text;
             string Password = txt_password.Text;
 
-            //string passwod = txt_password.Text;
-            //  passwod=FormsAuthentication.HashPasswordForStoringInConfigFile(passwod, "SHA1");
+            string passwod = txt_password.Text;
+            passwod = FormsAuthentication.HashPasswordForStoringInConfigFile(passwod, "SHA1");
 
             bool q = IgoContext.Customers.AsQueryable().Any(c => c.Phone == txt_Phone.Text && c.Password == txt_password.Text);
-            bool q2 = IgoContext.Customers.AsQueryable().Any(c => c.Phone == txt_Phone.Text && c.Password != txt_password.Text);
+           
 
 
             if (q)
@@ -42,14 +42,14 @@ namespace 期中專題
                     {
                         MessageBox.Show("登入成功","溫腥小提示！", MessageBoxButtons.OK, MessageBoxIcon.Information);
                      var q1 = IgoContext.Customers.AsEnumerable().Where(c => c.Phone == txt_Phone.Text).Select(c => new { c.CustumerID,c.FirstName}).FirstOrDefault();
-                    txt_CusName_hide.Text = q1.FirstName;
-
-
-                    this.Text = $" Dear{txt_CusName_hide.Text}歡迎使用IGO";
-                    MessageBox.Show($"Dear {txt_CusName_hide.Text} 歡迎使用IGO");
 
                     customer.customerID = q1.CustumerID;
                     customer.Name = q1.FirstName;
+
+                    this.Text = $" Dear{customer.Name}歡迎使用IGO";
+                    MessageBox.Show($"Dear {customer.Name} 歡迎使用IGO");
+
+                    
                     HomePage homepage = new HomePage();
                     //Frm_Login Login = new Frm_Login();
                     this.Visible = false;
@@ -82,6 +82,7 @@ namespace 期中專題
             Register register = new Register();
             register.ShowDialog();
         }
+
     }
         
     }

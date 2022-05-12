@@ -276,5 +276,6 @@ namespace IGO_font
             MessageBox.Show("已加入購物車!");
 
         }
+
     }
 }

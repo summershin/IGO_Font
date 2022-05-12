@@ -213,6 +213,44 @@ namespace IGO
            
         }
 
-        
+        private void Gb_AfterQuery_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lb_5Star_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cb_Star_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lb_CommentProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tb_Comment_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cb_Product_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Gb_Button_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

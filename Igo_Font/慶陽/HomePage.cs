@@ -69,5 +69,6 @@ namespace IGO_font.慶陽
             f.Parent = this.splitContainer2.Panel2;
             f.Show();
         }
+
     }
 }
