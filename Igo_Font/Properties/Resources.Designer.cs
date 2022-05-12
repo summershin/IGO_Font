@@ -63,6 +63,16 @@ namespace Igo_Font.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap _333 {
+            get {
+                object obj = ResourceManager.GetObject("333", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap 圖片36 {
             get {
                 object obj = ResourceManager.GetObject("圖片36", resourceCulture);

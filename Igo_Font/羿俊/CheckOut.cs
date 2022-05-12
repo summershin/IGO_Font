@@ -23,15 +23,15 @@ namespace IGO_font
         int Price = 0;
         int TicketCount = 0;
         int count = 0;
-        
+
 
         IGOEntities dbcontext = new IGOEntities();
-        
-        
+
+
         Product p = new Product();
         private void CheckOut_Load(object sender, EventArgs e)
         {
-            
+
             var payment = from p in dbcontext.Payments
                           select p.PayType;
             foreach (string item in payment)
@@ -77,7 +77,7 @@ namespace IGO_font
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = myCarts;
 
-                if (dataGridView1.RowCount>0)
+                if (dataGridView1.RowCount > 0)
                 {
                     var q5 = from p in dbcontext.Temps.AsEnumerable()
                              where p.TempOrder == dataGridView1.CurrentRow.Cells[0].Value.ToString()
@@ -123,7 +123,8 @@ namespace IGO_font
 
 
             }
-            catch(Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show("購物車沒有資料");
             }
 
@@ -134,14 +135,14 @@ namespace IGO_font
             var q3 = from t in dbcontext.Temps.AsEnumerable()
                      where t.TempOrder == (string)dataGridView1.CurrentRow.Cells[0].Value
                      select t;
-            
+
             if (q3 != null)
             {
                 foreach (var item in q3)
                 {
                     dbcontext.Temps.Remove(item);
                 }
-                
+
                 dbcontext.SaveChanges();
                 var q4 = (from p in dbcontext.Temps
                           where p.CustomerID == customer.customerID
@@ -158,9 +159,9 @@ namespace IGO_font
             }
         }
 
-     
 
-        
+
+
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -176,16 +177,16 @@ namespace IGO_font
                          票種 = p.TicketType.TicketName,
                          票數 = p.Quantity,
                          票價 = p.TotalPrice,
-                         
+
 
                      };
-            
+
             for (int i = 0; i < q5.ToList().Count; i++)
             {
                 Price += (int)q5.ToList()[i].票價;
                 TicketCount += (int)q5.ToList()[i].票數;
             }
-           
+
             lbl_Price.Text = $"總價:{Price:C2}";
 
             var q6 = from p in dbcontext.Temps.AsEnumerable()
@@ -223,7 +224,7 @@ namespace IGO_font
             dbcontext.Orders.Add(od);
             dbcontext.SaveChanges();
 
-          
+
             foreach (var item in q3)
             {
 
@@ -238,7 +239,7 @@ namespace IGO_font
                 if (item.Seats != null)
                 {
                     string[] seats = item.Seats.Split(',');
-                    for(int s = 0; s < seats.Length-1; s++)
+                    for (int s = 0; s < seats.Length - 1; s++)
                     {
                         Seat addseat = new Seat();
                         addseat.OrderDetailID = dbcontext.OrderDetails.AsEnumerable().Last().OrderDetailsID;
@@ -248,28 +249,38 @@ namespace IGO_font
                     }
 
                 }
-                
+
             }
             dbcontext.SaveChanges();
 
 
             if (q3 != null)
             {
+
+                //修改product 的數量
+                var ProductChange = (from p in dbcontext.Products.AsEnumerable()
+                                     where p.ProductID == (int)dataGridView1.CurrentRow.Cells[1].Value
+                                     select p).FirstOrDefault();
+
+                ProductChange.Quantity = ProductChange.Quantity - TicketCount;
+
+                dbcontext.SaveChanges();
+
                 foreach (var item in q3)
                 {
                     dbcontext.Temps.Remove(item);
                 }
 
                 dbcontext.SaveChanges();
-                
-                
+
+
                 var q4 = (from p in dbcontext.Temps
                           where p.CustomerID == customer.customerID
                           select new { p.TempOrder, p.ProductID, p.Product.ProductName }).Distinct();
 
 
                 //orderdetail 資料庫新增
-               
+
 
 
 
@@ -290,19 +301,13 @@ namespace IGO_font
                              總票價 = Price
 
                          };
-                           dataGridView2.DataSource = q6.ToList();
-                //修改product 的數量
-                var ProductChange = (from p in dbcontext.Products.AsEnumerable()
-                                    where p.ProductName == dataGridView1.CurrentRow.Cells[2].Value.ToString()
-                                    select p).FirstOrDefault();
-                
-                ProductChange.Quantity = ProductChange.Quantity - TicketCount;
-                dbcontext.SaveChanges();
-                
+                dataGridView2.DataSource = q6.ToList();
+
+
                 dataGridView1.DataSource = q4.ToList();
                 dataGridView2.DataSource = null;
 
-               
+                MessageBox.Show("結帳成功");
 
             }
             else
@@ -314,12 +319,13 @@ namespace IGO_font
 
         private void btn_Leave_Click(object sender, EventArgs e)
         {
-            
+
             this.Close();
-           
-            
-           
-            
+
+
+
+
+
         }
     }
 
@@ -330,7 +336,7 @@ namespace IGO_font
         public int ProductID { get; set; }
         public string ProductName { get; set; }
 
-        
+
 
     }
 }

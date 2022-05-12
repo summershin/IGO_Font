@@ -43,7 +43,6 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -274,6 +273,7 @@
       <DependentUpon>IgoModel.edmx</DependentUpon>
       <LastGenOutput>IgoModel.cs</LastGenOutput>
     </Content>
+    <None Include="羿俊\333.png" />
     <None Include="Resources\圖片58.jpg" />
     <None Include="Resources\圖片561.jpg" />
     <None Include="Resources\圖片56.jpg" />
