@@ -208,6 +208,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="子慧\OrderAndComment.resx">
       <DependentUpon>OrderAndComment.cs</DependentUpon>
@@ -269,6 +270,15 @@
       <DependentUpon>IgoModel.edmx</DependentUpon>
       <LastGenOutput>IgoModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\圖片58.jpg" />
+    <None Include="Resources\圖片561.jpg" />
+    <None Include="Resources\圖片56.jpg" />
+    <None Include="Resources\圖片36.jpg" />
+    <None Include="Resources\圖片42.jpg" />
+    <None Include="Resources\圖片55.jpg" />
+    <None Include="Resources\圖片401.jpg" />
+    <None Include="Resources\圖片40.jpg" />
+    <None Include="Resources\圖片38.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
