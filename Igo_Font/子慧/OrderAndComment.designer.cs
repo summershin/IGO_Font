@@ -151,7 +151,7 @@ namespace IGO
             this.Gb_AfterQuery.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Gb_AfterQuery.Controls.Add(this.DGV_OrderDetail);
             this.Gb_AfterQuery.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Gb_AfterQuery.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Gb_AfterQuery.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Gb_AfterQuery.Location = new System.Drawing.Point(51, 81);
             this.Gb_AfterQuery.Margin = new System.Windows.Forms.Padding(2);
             this.Gb_AfterQuery.Name = "Gb_AfterQuery";

@@ -1,15 +1,11 @@
 ﻿using Igo_Font;
 using IGO_font;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.Entity;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
+
 
 namespace IGO
 {
@@ -26,7 +22,8 @@ namespace IGO
         private void LoadProducttoCombobox()
         {
             var q = (from p in dbContext.OrderDetails.AsEnumerable()
-                    orderby p.ProductID ascending
+                     where  p.Order.CustomerID == customer.customerID
+                     orderby p.ProductID ascending
                     select $"{ p.ProductID,4}" +": "+ p.Product.ProductName).Distinct();
 
             if (q.Any())
