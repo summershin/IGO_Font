@@ -63,7 +63,7 @@ namespace IGO_font
             {
 
                 Phone = txt_Phone.Text,
-                Password = txt_Password.Text,
+                Password = password,
                 LastName = txt_LastName.Text ,
                 FirstName = txt_FirstName.Text ,
                 Gender = cbx_Gender.Text,
@@ -138,6 +138,6 @@ namespace IGO_font
             }
         }
 
-       
+      
     }
 }

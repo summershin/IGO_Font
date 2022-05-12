@@ -33,7 +33,7 @@ namespace 期中專題
             string passwod = txt_password.Text;
             passwod = FormsAuthentication.HashPasswordForStoringInConfigFile(passwod, "SHA1");
 
-            bool q = IgoContext.Customers.AsQueryable().Any(c => c.Phone == txt_Phone.Text && c.Password == txt_password.Text);
+            bool q = IgoContext.Customers.AsQueryable().Any(c => c.Phone == txt_Phone.Text && c.Password == passwod);
            
 
 

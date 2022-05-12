@@ -232,6 +232,7 @@ namespace IGO_font
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(507, 42);
             this.txt_Email.TabIndex = 67;
+            this.txt_Email.TextChanged += new System.EventHandler(this.txt_Email_TextChanged);
             // 
             // label4
             // 
@@ -317,6 +318,7 @@ namespace IGO_font
             this.txt_Phone.Name = "txt_Phone";
             this.txt_Phone.Size = new System.Drawing.Size(217, 42);
             this.txt_Phone.TabIndex = 59;
+            this.txt_Phone.TextChanged += new System.EventHandler(this.txt_Phone_TextChanged);
             // 
             // Register
             // 
