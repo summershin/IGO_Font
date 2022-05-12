@@ -55,7 +55,28 @@ namespace 期中專題
                     this.Visible = false;
                     
                     homepage.ShowDialog();
-                    this.Close();
+
+                    if (customer.logout != 1)
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        if (checkBox1.Checked)
+                        {
+                            txt_password.Text = "";
+                            this.Visible = true;
+                            customer.logout = 0;
+                        }
+                        else
+                        {
+                            txt_password.Text = "";
+                            txt_Phone.Text = "";
+                            this.Visible = true;
+                            customer.logout = 0;
+                        }
+                    }
+
                     
                     
                 }

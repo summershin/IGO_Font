@@ -38,12 +38,14 @@ namespace 期中專題
             this.txt_Phone = new System.Windows.Forms.TextBox();
             this.lbl_IgoPW = new System.Windows.Forms.Label();
             this.lbl_IgoLgoin = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.txt_password);
             this.panel1.Controls.Add(this.btn_IgoRegister);
             this.panel1.Controls.Add(this.lbl_Phone);
@@ -71,7 +73,7 @@ namespace 期中專題
             this.btn_IgoRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_IgoRegister.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_IgoRegister.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_IgoRegister.Location = new System.Drawing.Point(313, 198);
+            this.btn_IgoRegister.Location = new System.Drawing.Point(290, 223);
             this.btn_IgoRegister.Margin = new System.Windows.Forms.Padding(4);
             this.btn_IgoRegister.Name = "btn_IgoRegister";
             this.btn_IgoRegister.Size = new System.Drawing.Size(120, 49);
@@ -98,7 +100,7 @@ namespace 期中專題
             this.btn_IgoLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_IgoLogin.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_IgoLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_IgoLogin.Location = new System.Drawing.Point(193, 198);
+            this.btn_IgoLogin.Location = new System.Drawing.Point(170, 223);
             this.btn_IgoLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btn_IgoLogin.Name = "btn_IgoLogin";
             this.btn_IgoLogin.Size = new System.Drawing.Size(112, 49);
@@ -141,6 +143,18 @@ namespace 期中專題
             this.lbl_IgoLgoin.TabIndex = 2;
             this.lbl_IgoLgoin.Text = "IGO 會員登入";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(296, 179);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(114, 29);
+            this.checkBox1.TabIndex = 5;
+            this.checkBox1.Text = "記住帳號";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -170,5 +184,6 @@ namespace 期中專題
         private System.Windows.Forms.TextBox txt_Phone;
         private System.Windows.Forms.Label lbl_IgoPW;
         private System.Windows.Forms.Label lbl_IgoLgoin;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

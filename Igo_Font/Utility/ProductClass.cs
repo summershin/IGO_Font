@@ -91,6 +91,7 @@ namespace IGO_font
     {
         public static int customerID { get; set; }
         public static string Name { get; set; }
+        public static int logout { get; set; }
     }
     
     

@@ -70,5 +70,19 @@ namespace IGO_font.慶陽
             f.Show();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("是否要登出並離開?", "注意!", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+
+            if (dr == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if(dr == DialogResult.No)
+            {
+                customer.logout = 1;
+            }
+
+        }
     }
 }
