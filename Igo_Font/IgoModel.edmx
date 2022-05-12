@@ -44,7 +44,7 @@
           <Property Name="CouponID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProductID(i)" Type="int" />
           <Property Name="ProductID(ii)" Type="int" />
-          <Property Name="Discount" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
         <EntityType Name="Customers">
           <Key>
@@ -56,7 +56,7 @@
           <Property Name="LastName" Type="nvarchar" MaxLength="10" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="10" />
           <Property Name="Email" Type="nvarchar" MaxLength="20" />
-          <Property Name="Phone" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="10" />
           <Property Name="Photo" Type="image" />
           <Property Name="Gender" Type="nvarchar" MaxLength="10" />
           <Property Name="Birth" Type="date" />
@@ -81,6 +81,7 @@
           <Property Name="ProductID" Type="int" />
           <Property Name="TicketID" Type="int" />
           <Property Name="Quantity" Type="int" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
         <EntityType Name="Orders">
           <Key>
@@ -186,7 +187,7 @@
           <Property Name="SubCategoryID" Type="int" />
           <Property Name="TicketID" Type="int" />
           <Property Name="Quantity" Type="int" />
-          <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Seats" Type="nvarchar" MaxLength="100" />
           <Property Name="TempOrder" Type="nvarchar" MaxLength="10" />
         </EntityType>
@@ -642,7 +643,7 @@
           <Property Name="CouponID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ProductID_i_" Type="Int32" />
           <Property Name="ProductID_ii_" Type="Int32" />
-          <Property Name="Discount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
         </EntityType>
         <EntityContainer Name="IGOEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
@@ -809,7 +810,7 @@
           <Property Name="LastName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="FirstName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Phone" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Birth" Type="DateTime" Precision="0" />
@@ -840,6 +841,7 @@
           <Property Name="ProductID" Type="Int32" />
           <Property Name="TicketID" Type="Int32" />
           <Property Name="Quantity" Type="Int32" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
           <NavigationProperty Name="Order" Relationship="IGOModel.FK_OrderDetail_Orders" FromRole="OrderDetail" ToRole="Order" />
           <NavigationProperty Name="Product" Relationship="IGOModel.FK_OrderDetail_Products" FromRole="OrderDetail" ToRole="Product" />
           <NavigationProperty Name="TicketType" Relationship="IGOModel.FK_OrderDetail_TicketTypes" FromRole="OrderDetail" ToRole="TicketType" />
@@ -962,7 +964,7 @@
           <Property Name="SubCategoryID" Type="Int32" />
           <Property Name="TicketID" Type="Int32" />
           <Property Name="Quantity" Type="Int32" />
-          <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="Seats" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="TempOrder" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Customer" Relationship="IGOModel.FK_Temp_Customers" FromRole="Temp" ToRole="Customer" />
@@ -1280,7 +1282,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1372,6 +1374,7 @@
           <EntitySetMapping Name="OrderDetails">
             <EntityTypeMapping TypeName="IGOModel.OrderDetail">
               <MappingFragment StoreEntitySet="OrderDetail">
+                <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="TicketID" ColumnName="TicketID" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
@@ -1507,7 +1510,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>
