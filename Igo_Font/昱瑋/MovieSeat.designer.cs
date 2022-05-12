@@ -81,6 +81,7 @@ namespace IGO_font
             this.btn_yes.TabIndex = 31;
             this.btn_yes.Text = "確認";
             this.btn_yes.UseVisualStyleBackColor = true;
+            this.btn_yes.Click += new System.EventHandler(this.btn_yes_Click);
             // 
             // panel1
             // 
@@ -111,7 +112,7 @@ namespace IGO_font
             this.panel1.Controls.Add(this.chkA3);
             this.panel1.Controls.Add(this.chkA16);
             this.panel1.Controls.Add(this.chkA11);
-            this.panel1.Location = new System.Drawing.Point(188, 101);
+            this.panel1.Location = new System.Drawing.Point(184, 103);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(602, 255);
             this.panel1.TabIndex = 30;
@@ -124,6 +125,7 @@ namespace IGO_font
             this.chkA18.Size = new System.Drawing.Size(22, 21);
             this.chkA18.TabIndex = 35;
             this.chkA18.UseVisualStyleBackColor = true;
+            this.chkA18.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA19
             // 
@@ -133,6 +135,7 @@ namespace IGO_font
             this.chkA19.Size = new System.Drawing.Size(22, 21);
             this.chkA19.TabIndex = 34;
             this.chkA19.UseVisualStyleBackColor = true;
+            this.chkA19.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA25
             // 
@@ -142,6 +145,7 @@ namespace IGO_font
             this.chkA25.Size = new System.Drawing.Size(22, 21);
             this.chkA25.TabIndex = 33;
             this.chkA25.UseVisualStyleBackColor = true;
+            this.chkA25.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA24
             // 
@@ -151,6 +155,7 @@ namespace IGO_font
             this.chkA24.Size = new System.Drawing.Size(22, 21);
             this.chkA24.TabIndex = 32;
             this.chkA24.UseVisualStyleBackColor = true;
+            this.chkA24.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA23
             // 
@@ -160,6 +165,7 @@ namespace IGO_font
             this.chkA23.Size = new System.Drawing.Size(22, 21);
             this.chkA23.TabIndex = 31;
             this.chkA23.UseVisualStyleBackColor = true;
+            this.chkA23.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA22
             // 
@@ -169,6 +175,7 @@ namespace IGO_font
             this.chkA22.Size = new System.Drawing.Size(22, 21);
             this.chkA22.TabIndex = 30;
             this.chkA22.UseVisualStyleBackColor = true;
+            this.chkA22.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA21
             // 
@@ -178,6 +185,7 @@ namespace IGO_font
             this.chkA21.Size = new System.Drawing.Size(22, 21);
             this.chkA21.TabIndex = 29;
             this.chkA21.UseVisualStyleBackColor = true;
+            this.chkA21.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA20
             // 
@@ -187,6 +195,7 @@ namespace IGO_font
             this.chkA20.Size = new System.Drawing.Size(22, 21);
             this.chkA20.TabIndex = 28;
             this.chkA20.UseVisualStyleBackColor = true;
+            this.chkA20.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA17
             // 
@@ -196,6 +205,7 @@ namespace IGO_font
             this.chkA17.Size = new System.Drawing.Size(22, 21);
             this.chkA17.TabIndex = 27;
             this.chkA17.UseVisualStyleBackColor = true;
+            this.chkA17.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA2
             // 
@@ -205,6 +215,7 @@ namespace IGO_font
             this.chkA2.Size = new System.Drawing.Size(22, 21);
             this.chkA2.TabIndex = 12;
             this.chkA2.UseVisualStyleBackColor = true;
+            this.chkA2.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA12
             // 
@@ -214,6 +225,7 @@ namespace IGO_font
             this.chkA12.Size = new System.Drawing.Size(22, 21);
             this.chkA12.TabIndex = 24;
             this.chkA12.UseVisualStyleBackColor = true;
+            this.chkA12.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA5
             // 
@@ -223,6 +235,7 @@ namespace IGO_font
             this.chkA5.Size = new System.Drawing.Size(22, 21);
             this.chkA5.TabIndex = 13;
             this.chkA5.UseVisualStyleBackColor = true;
+            this.chkA5.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA4
             // 
@@ -232,6 +245,7 @@ namespace IGO_font
             this.chkA4.Size = new System.Drawing.Size(22, 21);
             this.chkA4.TabIndex = 10;
             this.chkA4.UseVisualStyleBackColor = true;
+            this.chkA4.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA8
             // 
@@ -241,6 +255,7 @@ namespace IGO_font
             this.chkA8.Size = new System.Drawing.Size(22, 21);
             this.chkA8.TabIndex = 6;
             this.chkA8.UseVisualStyleBackColor = true;
+            this.chkA8.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA6
             // 
@@ -250,6 +265,7 @@ namespace IGO_font
             this.chkA6.Size = new System.Drawing.Size(22, 21);
             this.chkA6.TabIndex = 7;
             this.chkA6.UseVisualStyleBackColor = true;
+            this.chkA6.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA10
             // 
@@ -259,6 +275,7 @@ namespace IGO_font
             this.chkA10.Size = new System.Drawing.Size(22, 21);
             this.chkA10.TabIndex = 16;
             this.chkA10.UseVisualStyleBackColor = true;
+            this.chkA10.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA13
             // 
@@ -268,6 +285,7 @@ namespace IGO_font
             this.chkA13.Size = new System.Drawing.Size(22, 21);
             this.chkA13.TabIndex = 3;
             this.chkA13.UseVisualStyleBackColor = true;
+            this.chkA13.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA1
             // 
@@ -277,6 +295,7 @@ namespace IGO_font
             this.chkA1.Size = new System.Drawing.Size(22, 21);
             this.chkA1.TabIndex = 2;
             this.chkA1.UseVisualStyleBackColor = true;
+            this.chkA1.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA15
             // 
@@ -286,6 +305,7 @@ namespace IGO_font
             this.chkA15.Size = new System.Drawing.Size(22, 21);
             this.chkA15.TabIndex = 4;
             this.chkA15.UseVisualStyleBackColor = true;
+            this.chkA15.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA14
             // 
@@ -295,6 +315,7 @@ namespace IGO_font
             this.chkA14.Size = new System.Drawing.Size(22, 21);
             this.chkA14.TabIndex = 26;
             this.chkA14.UseVisualStyleBackColor = true;
+            this.chkA14.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA7
             // 
@@ -304,6 +325,7 @@ namespace IGO_font
             this.chkA7.Size = new System.Drawing.Size(22, 21);
             this.chkA7.TabIndex = 15;
             this.chkA7.UseVisualStyleBackColor = true;
+            this.chkA7.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA9
             // 
@@ -313,6 +335,7 @@ namespace IGO_font
             this.chkA9.Size = new System.Drawing.Size(22, 21);
             this.chkA9.TabIndex = 8;
             this.chkA9.UseVisualStyleBackColor = true;
+            this.chkA9.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA3
             // 
@@ -322,6 +345,7 @@ namespace IGO_font
             this.chkA3.Size = new System.Drawing.Size(22, 21);
             this.chkA3.TabIndex = 17;
             this.chkA3.UseVisualStyleBackColor = true;
+            this.chkA3.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA16
             // 
@@ -331,6 +355,7 @@ namespace IGO_font
             this.chkA16.Size = new System.Drawing.Size(22, 21);
             this.chkA16.TabIndex = 25;
             this.chkA16.UseVisualStyleBackColor = true;
+            this.chkA16.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // chkA11
             // 
@@ -340,6 +365,7 @@ namespace IGO_font
             this.chkA11.Size = new System.Drawing.Size(22, 21);
             this.chkA11.TabIndex = 11;
             this.chkA11.UseVisualStyleBackColor = true;
+            this.chkA11.CheckedChanged += new System.EventHandler(this.chkA_CheckedChanged);
             // 
             // MovieSeat
             // 

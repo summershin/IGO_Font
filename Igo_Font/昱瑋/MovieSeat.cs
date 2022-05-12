@@ -103,8 +103,6 @@ namespace IGO_font
 
             public bool Locked { get; set; }
         }
-
-
     }
 }
 

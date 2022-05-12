@@ -841,6 +841,7 @@
           <Property Name="ProductID" Type="Int32" />
           <Property Name="TicketID" Type="Int32" />
           <Property Name="Quantity" Type="Int32" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
           <NavigationProperty Name="Order" Relationship="IGOModel.FK_OrderDetail_Orders" FromRole="OrderDetail" ToRole="Order" />
           <NavigationProperty Name="Product" Relationship="IGOModel.FK_OrderDetail_Products" FromRole="OrderDetail" ToRole="Product" />
           <NavigationProperty Name="TicketType" Relationship="IGOModel.FK_OrderDetail_TicketTypes" FromRole="OrderDetail" ToRole="TicketType" />
@@ -1282,7 +1283,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1510,7 +1511,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

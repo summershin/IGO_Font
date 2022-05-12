@@ -84,6 +84,7 @@ namespace IGO_font
         private void cmb_MovieAdress_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.cmb_Movie.Items.Clear();
+            this.cmb_Movie.Text=("請選擇電影");
             var q = (from o in dbContext.Products
                      where o.Address == this.cmb_MovieAdress.Text
                      select o.ProductName).Distinct();
@@ -201,12 +202,12 @@ namespace IGO_font
                         x.subcategory = (int)qq.ToList()[0];
                         if (q.ToList()[0].票種 == "全票")
                         {
-                            x.tickettype = 1;
+                            x.tickettype = 9;
                             x.price = 340 * int.Parse(q.ToList()[0].張數);
                         }
                         else
                         {
-                            x.tickettype = 2;
+                            x.tickettype = 10;
                             x.price = 320 * int.Parse(q.ToList()[0].張數);
                         }
                         apple.Add(x);
@@ -290,6 +291,7 @@ namespace IGO_font
             
             this.dbContext.Temps.Add(temp);
             this.dbContext.SaveChanges();
+            MessageBox.Show("加入購物車成功");
 
         }
     }
