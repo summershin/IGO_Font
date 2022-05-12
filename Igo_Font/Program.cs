@@ -19,7 +19,7 @@ namespace Igo_Font
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new CheckOut());
+           // Application.Run(new CheckOut());
             //Application.Run(new Live());
             //Application.Run(new Register());
             //Application.Run(new HomePage());

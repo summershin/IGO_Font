@@ -273,6 +273,7 @@ namespace IGO_font
                 dbcontext.SaveChanges();
 
             }
+            dgv_BuyList.DataSource = null;
             MessageBox.Show("已加入購物車!");
 
         }

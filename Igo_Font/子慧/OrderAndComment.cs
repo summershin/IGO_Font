@@ -183,11 +183,12 @@ namespace IGO
                 MessageBox.Show("缺少必要五星評分");
                 return;
             }
-
+            
+            
             string g = Cb_Product.Text.Substring(0,4);
             FeedbackManagement feedback = new FeedbackManagement
             {
-                
+                CustomerID = customer.customerID,
                 FeedbackContent = Tb_Comment.Text,
                 Ranking = Convert.ToInt32(Cb_Star.Text),
                 ProductsID = Convert.ToInt32(g),
