@@ -50,6 +50,7 @@ namespace IGO_font
             this.cbx_RoomType = new System.Windows.Forms.ComboBox();
             this.cbx_TicketType = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ProductList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BuyList)).BeginInit();
             this.SuspendLayout();
@@ -121,7 +122,7 @@ namespace IGO_font
             this.btn_AddBuyList.Name = "btn_AddBuyList";
             this.btn_AddBuyList.Size = new System.Drawing.Size(119, 42);
             this.btn_AddBuyList.TabIndex = 8;
-            this.btn_AddBuyList.Text = "加入購物車";
+            this.btn_AddBuyList.Text = "加入購物清單";
             this.btn_AddBuyList.UseVisualStyleBackColor = true;
             this.btn_AddBuyList.Click += new System.EventHandler(this.btn_AddBuyList_Click);
             // 
@@ -264,11 +265,21 @@ namespace IGO_font
             this.label3.TabIndex = 22;
             this.label3.Text = "房型:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1127, 593);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 42);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "進入購物車";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Live
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1304, 672);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbx_TicketType);
             this.Controls.Add(this.label6);
@@ -322,5 +333,6 @@ namespace IGO_font
         private System.Windows.Forms.ComboBox cbx_RoomType;
         private System.Windows.Forms.ComboBox cbx_TicketType;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -143,6 +143,12 @@
       <DependentUpon>IgoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Utility\ProductClass.cs" />
+    <Compile Include="子慧\OrderAndComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="子慧\OrderAndComment.designer.cs">
+      <DependentUpon>OrderAndComment.cs</DependentUpon>
+    </Compile>
     <Compile Include="慶陽\HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="子慧\OrderAndComment.resx">
+      <DependentUpon>OrderAndComment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="慶陽\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,9 +257,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="子慧\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="IgoModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

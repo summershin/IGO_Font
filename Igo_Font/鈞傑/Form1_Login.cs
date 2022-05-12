@@ -48,10 +48,12 @@ namespace 期中專題
                     this.Text = $" Dear{txt_CusName_hide.Text}歡迎使用IGO";
                     MessageBox.Show($"Dear {txt_CusName_hide.Text} 歡迎使用IGO");
 
+                    customer.customerID = q1.CustumerID;
+                    customer.Name = q1.FirstName;
                     HomePage homepage = new HomePage();
-                    homepage.Tag = q1.CustumerID;
                     //Frm_Login Login = new Frm_Login();
                     this.Visible = false;
+                    
                     homepage.ShowDialog();
                     this.Close();
                     

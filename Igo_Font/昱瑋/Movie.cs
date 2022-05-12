@@ -283,7 +283,7 @@ namespace IGO_font
                 temp.TotalPrice = apple[i].price;
                 temp.Seats = apple[i].seat;
                 temp.SubCategoryID = apple[i].subcategory;
-                temp.CustomerID = 1;
+                temp.CustomerID = customer.customerID;
                 
             }
             temp.TempOrder = s;

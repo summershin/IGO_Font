@@ -113,8 +113,6 @@ namespace IGO_font
 
         }
         List<object> pro = new List<object>();
-        //List<int> proID = new List<int>();
-        //List<int> Quentity = new List<int>();
         
 
         private void btn_AddBuyList_Click(object sender, EventArgs e)
@@ -147,10 +145,8 @@ namespace IGO_font
                         totalnum += ProductClass.items[num].quentity;
                     }
                 }
-                //ProductClass.items[ProductClass.indexof(proid)].quentity += buytknum;
                 if (totalnum > quentity)
                 {
-                    //ProductClass.items[ProductClass.indexof(proid)].quentity -= buytknum;
                     MessageBox.Show("空房不足");
                     return;
                 }
@@ -169,90 +165,13 @@ namespace IGO_font
                 proditem.productID = proid;
                 proditem.quentity = buytknum;
                 proditem.ticket = dbcontext.TicketTypes.Where(n => n.TicketName == cbx_TicketType.SelectedItem.ToString()).Select(n=>n.TicketName).First();
-                proditem.price = dbcontext.TicketAndProducts.Where(n => n.TicketType.TicketName == proditem.ticket && n.ProductID == proid).Select(n => n.Price).FirstOrDefault().Value;
+                proditem.price = (dbcontext.TicketAndProducts.Where(n => n.TicketType.TicketName == proditem.ticket && n.ProductID == proid).Select(n => n.Price).FirstOrDefault().Value)* buytknum;
                 ProductClass.additem(proditem);
             }
 
             ProductClass.showdata(pro,ProductClass.items);
-            //pro.Clear();
-            //for (int i = 0; i < ProductClass.count(); i++)
-            //{
-            //    var q = dbcontext.Products.AsEnumerable().Where(n => n.ProductID == ProductClass.items[i].productID).Select(n => new
-            //    {
-            //        產品編號 = n.ProductID,
-            //        房間種類 = n.ProductName,
-            //        訂購數量 = ProductClass.items[i].quentity,
-            //        房型 = ProductClass.items[i].ticket,
-            //        入住日期 = n.StartTime.Value.ToString("d"),
-            //        退房日期 = n.EndTime.Value.ToString("d"),
-            //        n.Introduction,
-            //        價格 = dbcontext.TicketAndProducts.AsEnumerable().Where(s => s.ProductID == ProductClass.items[i].productID && s.TicketType.TicketName == ProductClass.items[i].ticket).Select(x => x.Price).First().Value.ToString()
-            //    });
-            //    pro.Add(q.First());
-
-            //}
-
+            
             dgv_BuyList.DataSource = pro.ToList();
-
-            //int quentity = Convert.ToInt32(dgv_ProductList.CurrentRow.Cells[5].Value);
-            //int buytknum = 0;
-            //bool a = int.TryParse(txt_BuyTkNum.Text, out buytknum);
-            //int proid = Convert.ToInt32(dgv_ProductList.CurrentRow.Cells[0].Value);
-            //if (!a)
-            //{
-            //    MessageBox.Show("請輸入數量");
-            //    return;
-            //}
-            ////else if (cbx_RoomType.SelectedIndex==-1)
-            ////{
-            ////    MessageBox.Show("請選擇房型");
-            ////    return;
-            ////}
-            //else if (proID22222.Contains(proid))
-            //{
-
-            //    Quentity11111[proID22222.IndexOf(proid)] += buytknum;
-            //    if (Quentity11111[proID22222.IndexOf(proid)] > quentity)
-            //    {
-            //        Quentity11111[proID22222.IndexOf(proid)] -= buytknum;
-            //        MessageBox.Show("空房不足");
-            //        return;
-            //    }
-            //}
-            //else
-            //{
-            //    if (buytknum > quentity)
-            //    {
-            //        MessageBox.Show("空房不足");
-            //        return;
-            //    }
-
-            //    proID22222.Add(proid);
-            //    Quentity11111.Add(buytknum);
-            //}
-
-            //pro.Clear();
-            //for (int i = 0; i < proID22222.Count; i++)
-            //{
-            //    var q = dbcontext.Products.AsEnumerable().Where(n => n.ProductID == proID22222[i]).Select(n => new
-            //    {
-            //        產品編號 = n.ProductID,
-            //        n.ProductName,
-            //        n.Address,
-            //        n.City.City1,
-            //        n.Supplier.CompanyName,
-            //        訂購數量 = Quentity11111[i],
-            //        房型 = cbx_RoomType.SelectedItem,
-            //        入住日期 = n.StartTime.Value.ToString("d"),
-            //        退房日期 = n.EndTime.Value.ToString("d"),
-            //        n.Introduction,
-            //        價格 = dbcontext.TicketAndProducts.AsEnumerable().Where(s => s.ProductID == proID22222[i] && s.TicketID == 1).Select(x => x.Price).First().Value.ToString()
-            //    });
-            //    pro.Add(q.First());
-
-            //}
-
-            //dgv_BuyList.DataSource = pro.ToList();
 
         }
 
@@ -285,25 +204,7 @@ namespace IGO_font
             }
 
             ProductClass.showdata(pro,ProductClass.items);
-            //pro.Clear();
-
-            //for (int i = 0; i < ProductClass.count(); i++)
-            //{
-            //    var q = dbcontext.Products.AsEnumerable().Where(n => n.ProductID == ProductClass.items[i].productID).Select(n => new
-            //    {
-            //        產品編號 = n.ProductID,
-            //        房間種類 = n.ProductName,
-            //        訂購數量 = ProductClass.items[i].quentity,
-            //        房型 = ProductClass.items[i].ticket,
-            //        入住日期 = n.StartTime.Value.ToString("d"),
-            //        退房日期 = n.EndTime.Value.ToString("d"),
-            //        n.Introduction,
-            //        價格 = dbcontext.TicketAndProducts.AsEnumerable().Where(s => s.ProductID == ProductClass.items[i].productID && s.TicketType.TicketName == ProductClass.items[i].ticket).Select(x => x.Price).First().Value.ToString()
-            //    });
-
-            //    pro.Add(q.FirstOrDefault());
-
-            //}
+          
             dgv_BuyList.DataSource = pro.ToList();
         }
 
@@ -353,11 +254,6 @@ namespace IGO_font
 
         private void btn_Order_Click(object sender, EventArgs e)
         {
-            //if(dgv_BuyList.DataSource == null)
-            //{
-            //    MessageBox.Show("請先選擇商品!");
-            //    return;
-            //}
             Random ran = new Random();
             string s = (ran.Next(1, 1000) * ran.Next(1, 1000)).ToString();
 
@@ -366,7 +262,7 @@ namespace IGO_font
                 var insert = new Temp
                 {
                     ProductID = ProductClass.items[i].productID,
-                    CustomerID = 1,
+                    CustomerID = customer.customerID,
                     SubCategoryID = 1,
                     TicketID = dbcontext.TicketTypes.AsEnumerable().Where(n => n.TicketName == ProductClass.items[i].ticket).Select(n => n.TicketID).FirstOrDefault(),
                     Quantity = ProductClass.items[i].quentity,
@@ -377,10 +273,8 @@ namespace IGO_font
                 dbcontext.SaveChanges();
 
             }
+            MessageBox.Show("已加入購物車!");
 
-            CheckOut f = new CheckOut();
-            f.Show();
-            
         }
     }
 }

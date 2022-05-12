@@ -63,21 +63,21 @@ namespace IGO_font
             {
 
                 Phone = txt_Phone.Text,
-                Password = txt_Password.Text == "" ? null : password,
-                LastName = txt_LastName.Text == "" ? null : txt_LastName.Text,
-                FirstName = txt_FirstName.Text == "" ? null : txt_FirstName.Text,
+                Password = txt_Password.Text,
+                LastName = txt_LastName.Text ,
+                FirstName = txt_FirstName.Text ,
                 Gender = cbx_Gender.Text,
                 Birth = dtp_Birth.Value.Date,
-                Email = txt_Email.Text == "" ? null : txt_Email.Text,
-                Address = txt_Address.Text == "" ? null : txt_Address.Text,
+                Email = txt_Email.Text ,
+                Address = txt_Address.Text ,
                 Photo = byt
 
             };
+                dbcontext.Customers.Add(insert);
+                dbcontext.SaveChanges();
 
-            dbcontext.Customers.Add(insert);
-            dbcontext.SaveChanges();
-            var q = dbcontext.Customers.Select(n => n);
-            dataGridView1.DataSource = q.ToList();
+            MessageBox.Show("註冊成功!\n跳轉回登入介面!");
+            this.Close();
         }
 
         private void btn_Browses_Click(object sender, EventArgs e)

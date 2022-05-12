@@ -32,11 +32,11 @@ namespace IGO_font.慶陽
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_User = new System.Windows.Forms.Button();
             this.btn_Live = new System.Windows.Forms.Button();
-            this.btn_Movie = new System.Windows.Forms.Button();
             this.btn_View = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Movie = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -74,6 +74,7 @@ namespace IGO_font.慶陽
             this.label1.Size = new System.Drawing.Size(119, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "使用者名稱:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // splitContainer2
             // 
@@ -93,6 +94,18 @@ namespace IGO_font.慶陽
             this.splitContainer2.SplitterDistance = 221;
             this.splitContainer2.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(22, 320);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 37);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "購物車";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btn_User
             // 
             this.btn_User.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -103,6 +116,7 @@ namespace IGO_font.慶陽
             this.btn_User.TabIndex = 3;
             this.btn_User.Text = "使用者";
             this.btn_User.UseVisualStyleBackColor = true;
+            this.btn_User.Click += new System.EventHandler(this.btn_User_Click);
             // 
             // btn_Live
             // 
@@ -116,17 +130,6 @@ namespace IGO_font.慶陽
             this.btn_Live.UseVisualStyleBackColor = true;
             this.btn_Live.Click += new System.EventHandler(this.btn_Live_Click);
             // 
-            // btn_Movie
-            // 
-            this.btn_Movie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Movie.Location = new System.Drawing.Point(22, 176);
-            this.btn_Movie.Name = "btn_Movie";
-            this.btn_Movie.Size = new System.Drawing.Size(87, 37);
-            this.btn_Movie.TabIndex = 1;
-            this.btn_Movie.Text = "電影";
-            this.btn_Movie.UseVisualStyleBackColor = true;
-            // 
             // btn_View
             // 
             this.btn_View.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -139,16 +142,17 @@ namespace IGO_font.慶陽
             this.btn_View.UseVisualStyleBackColor = true;
             this.btn_View.Click += new System.EventHandler(this.btn_View_Click);
             // 
-            // button1
+            // btn_Movie
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btn_Movie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(22, 320);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 37);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "購物車";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Movie.Location = new System.Drawing.Point(22, 176);
+            this.btn_Movie.Name = "btn_Movie";
+            this.btn_Movie.Size = new System.Drawing.Size(87, 37);
+            this.btn_Movie.TabIndex = 1;
+            this.btn_Movie.Text = "電影";
+            this.btn_Movie.UseVisualStyleBackColor = true;
+            this.btn_Movie.Click += new System.EventHandler(this.btn_Movie_Click);
             // 
             // HomePage
             // 

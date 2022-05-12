@@ -65,7 +65,7 @@ namespace IGO_font
                     入住日期 = n.StartTime.Value.ToString("d"),
                     退房日期 = n.EndTime.Value.ToString("d"),
                     n.Introduction,
-                    價格 = dbcontext.TicketAndProducts.AsEnumerable().Where(s => s.ProductID == items[i].productID && s.TicketType.TicketName == items[i].ticket).Select(x => x.Price).First().Value.ToString()
+                    價格 = ((dbcontext.TicketAndProducts.AsEnumerable().Where(s => s.ProductID == items[i].productID && s.TicketType.TicketName == items[i].ticket).Select(x => x.Price).First().Value)*items[i].quentity).ToString()
                 });
 
                 pro.Add(q.FirstOrDefault());
@@ -87,6 +87,12 @@ namespace IGO_font
         public int seatID { get; set; }
         public int TempOrder { get; set; }
     }
+     class customer
+    {
+        public static int customerID { get; set; }
+        public static string Name { get; set; }
+    }
+    
     
 
     

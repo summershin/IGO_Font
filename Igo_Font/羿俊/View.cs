@@ -31,13 +31,28 @@ namespace IGO_font
             }
             cmb_City.SelectedIndex = 0;
 
-                
+            //顯示所有行程
+            var show = from p in dbcontext.Products.AsEnumerable()
+                    where  p.SubCategoryID == 2
+                    select new
+                    {
+                        產品編號 = p.ProductID,
+                        產品名稱 = p.ProductName,
+                        產品數量 = p.Quantity,
+                        產品地點 = p.City.City1,
+                        開始時間 = p.StartTime,
+                        結束時間 = p.EndTime
+
+
+                    };
+            dataGridView1.DataSource = show.ToList();
+
         }
         //===========================================================================================
         private void btn_Search_Click(object sender, EventArgs e)
         {
             pp = from p in dbcontext.TicketAndProducts.AsEnumerable()
-                 select p;
+                select p;
             if (Check_Date.Checked == false && Check_City.Checked == false)
             {
                 MessageBox.Show("請選擇查詢方式");
@@ -51,10 +66,11 @@ namespace IGO_font
                 {
 
                     var q = from p in dbcontext.Products.AsEnumerable()
-                           
-                           
+
+
                             where p.StartTime.Value.Date <= dateTimePicker1.Value.Date
                                   && p.EndTime.Value.Date >= dateTimePicker1.Value.Date
+                                  && p.SubCategoryID == 2
                           
                             select new
                             {
@@ -88,7 +104,7 @@ namespace IGO_font
                 if (Check_City.Checked == true)
                 {
                     var q = from p in dbcontext.Products.AsEnumerable()
-                            where p.City.City1 == cmb_City.SelectedItem.ToString()
+                            where p.City.City1 == cmb_City.SelectedItem.ToString() && p.SubCategoryID == 2
                             select new
                             {
                                 產品編號 = p.ProductID,
@@ -119,6 +135,7 @@ namespace IGO_font
                             where p.City.City1 == cmb_City.SelectedItem.ToString()
                             && p.StartTime.Value.Date <= dateTimePicker1.Value.Date
                                   && p.EndTime.Value.Date >= dateTimePicker1.Value.Date
+                                  && p.SubCategoryID == 2
                             select new
                             {
                                 產品編號 = p.ProductID,
@@ -281,7 +298,7 @@ namespace IGO_font
             CheckOut checkOut = new CheckOut();
             checkOut.Show();
         dataGridView1.DataSource = null;
-         this.Hide();
+         
            
             
 
@@ -336,21 +353,22 @@ namespace IGO_font
                             string rrr = (r.Next(1, 100) * r.Next(1, 100)).ToString();
                             //全票區
                             data.ProductID = q3.ToList()[0].ProductID;
-                            data.TicketID = 1;
+                            data.TicketID = 6;
                             data.Quantity = int.Parse(q2.ToList()[0].全票張數);
                             data.TempOrder = rrr;
-                             data.TotalPrice = p3.ToList()[0].Price * int.Parse(txt_FullPrice.Text);
-
+                            data.TotalPrice = p3.ToList()[0].Price * int.Parse(txt_FullPrice.Text);
+                            data.CustomerID = customer.customerID;
                             dbcontext.Temps.Add(data);
                             dbcontext.SaveChanges();
 
                             //================================================================================
                             //半票區
                             data.ProductID = q3.ToList()[0].ProductID;
-                            data.TicketID = 2;
+                            data.TicketID = 7;
                             data.Quantity = int.Parse(q2.ToList()[0].半票張數);
                             data.TotalPrice = p3.ToList()[1].Price * int.Parse(txt_HalfPrice.Text);
                             data.TempOrder = rrr;
+                            data.CustomerID = customer.customerID;
                             dbcontext.Temps.Add(data);
                             dbcontext.SaveChanges();
 
@@ -362,7 +380,25 @@ namespace IGO_font
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+        }
+
+        private void btn_ShowAll_Click(object sender, EventArgs e)
+        {
+            var show = from p in dbcontext.Products.AsEnumerable()
+                       where p.SubCategoryID == 2
+                       select new
+                       {
+                           產品編號 = p.ProductID,
+                           產品名稱 = p.ProductName,
+                           產品數量 = p.Quantity,
+                           產品地點 = p.City.City1,
+                           開始時間 = p.StartTime,
+                           結束時間 = p.EndTime
+
+
+                       };
+            dataGridView1.DataSource = show.ToList();
         }
     }
     public class Mycheck

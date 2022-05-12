@@ -50,7 +50,7 @@ namespace IGO_font
             this.btn_EnterCart = new System.Windows.Forms.Button();
             this.btn_AddCart = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
-            this.btn = new System.Windows.Forms.Button();
+            this.btn_ShowAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -78,10 +78,10 @@ namespace IGO_font
             // 
             // btn_Search
             // 
-            this.btn_Search.Location = new System.Drawing.Point(189, 79);
+            this.btn_Search.Location = new System.Drawing.Point(189, 74);
             this.btn_Search.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(58, 22);
+            this.btn_Search.Size = new System.Drawing.Size(86, 27);
             this.btn_Search.TabIndex = 3;
             this.btn_Search.Text = "查詢";
             this.btn_Search.UseVisualStyleBackColor = true;
@@ -107,7 +107,7 @@ namespace IGO_font
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(224, 283);
+            this.btn_Add.Location = new System.Drawing.Point(413, 231);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(90, 31);
@@ -129,7 +129,7 @@ namespace IGO_font
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(130, 283);
+            this.btn_Delete.Location = new System.Drawing.Point(413, 319);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(90, 31);
@@ -140,7 +140,7 @@ namespace IGO_font
             // 
             // btn_Clear
             // 
-            this.btn_Clear.Location = new System.Drawing.Point(319, 283);
+            this.btn_Clear.Location = new System.Drawing.Point(413, 364);
             this.btn_Clear.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Clear.Name = "btn_Clear";
             this.btn_Clear.Size = new System.Drawing.Size(90, 31);
@@ -152,7 +152,7 @@ namespace IGO_font
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(317, 48);
+            this.label3.Location = new System.Drawing.Point(413, 163);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 12);
@@ -162,16 +162,16 @@ namespace IGO_font
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(317, 87);
+            this.label4.Location = new System.Drawing.Point(413, 202);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 12);
+            this.label4.Size = new System.Drawing.Size(44, 12);
             this.label4.TabIndex = 11;
-            this.label4.Text = "半票:";
+            this.label4.Text = "優待票:";
             // 
             // txt_FullPrice
             // 
-            this.txt_FullPrice.Location = new System.Drawing.Point(352, 40);
+            this.txt_FullPrice.Location = new System.Drawing.Point(461, 160);
             this.txt_FullPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txt_FullPrice.Name = "txt_FullPrice";
             this.txt_FullPrice.Size = new System.Drawing.Size(76, 22);
@@ -180,7 +180,7 @@ namespace IGO_font
             // 
             // txt_HalfPrice
             // 
-            this.txt_HalfPrice.Location = new System.Drawing.Point(352, 79);
+            this.txt_HalfPrice.Location = new System.Drawing.Point(461, 199);
             this.txt_HalfPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txt_HalfPrice.Name = "txt_HalfPrice";
             this.txt_HalfPrice.Size = new System.Drawing.Size(76, 22);
@@ -190,7 +190,7 @@ namespace IGO_font
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(432, 48);
+            this.label5.Location = new System.Drawing.Point(541, 168);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(17, 12);
@@ -200,7 +200,7 @@ namespace IGO_font
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(432, 87);
+            this.label6.Location = new System.Drawing.Point(541, 207);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(17, 12);
@@ -268,15 +268,16 @@ namespace IGO_font
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
-            // btn
+            // btn_ShowAll
             // 
-            this.btn.Location = new System.Drawing.Point(247, 2);
-            this.btn.Margin = new System.Windows.Forms.Padding(2);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(51, 73);
-            this.btn.TabIndex = 23;
-            this.btn.Text = "顯示所有行程";
-            this.btn.UseVisualStyleBackColor = true;
+            this.btn_ShowAll.Location = new System.Drawing.Point(279, 74);
+            this.btn_ShowAll.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ShowAll.Name = "btn_ShowAll";
+            this.btn_ShowAll.Size = new System.Drawing.Size(88, 27);
+            this.btn_ShowAll.TabIndex = 23;
+            this.btn_ShowAll.Text = "顯示所有行程";
+            this.btn_ShowAll.UseVisualStyleBackColor = true;
+            this.btn_ShowAll.Click += new System.EventHandler(this.btn_ShowAll_Click);
             // 
             // View
             // 
@@ -284,7 +285,7 @@ namespace IGO_font
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 477);
             this.ControlBox = false;
-            this.Controls.Add(this.btn);
+            this.Controls.Add(this.btn_ShowAll);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_AddCart);
             this.Controls.Add(this.btn_EnterCart);
@@ -340,7 +341,7 @@ namespace IGO_font
         private System.Windows.Forms.Button btn_EnterCart;
         private System.Windows.Forms.Button btn_AddCart;
         private System.Windows.Forms.Button btn_Exit;
-        private System.Windows.Forms.Button btn;
+        private System.Windows.Forms.Button btn_ShowAll;
     }
 }
 
