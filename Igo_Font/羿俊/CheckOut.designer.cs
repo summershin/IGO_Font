@@ -38,9 +38,9 @@ namespace IGO_font
             this.cmb_Payment = new System.Windows.Forms.ComboBox();
             this.btn_Leave = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -52,24 +52,22 @@ namespace IGO_font
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 236);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(35, 189);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(840, 530);
+            this.dataGridView1.Size = new System.Drawing.Size(630, 424);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btn_Delete
             // 
             this.btn_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Delete.BackgroundImage")));
-            this.btn_Delete.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_Delete.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_Delete.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_Delete.Location = new System.Drawing.Point(604, 799);
-            this.btn_Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Delete.Location = new System.Drawing.Point(452, 698);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(125, 46);
+            this.btn_Delete.Size = new System.Drawing.Size(166, 49);
             this.btn_Delete.TabIndex = 1;
             this.btn_Delete.Text = "刪除此筆訂單";
             this.btn_Delete.UseVisualStyleBackColor = true;
@@ -78,12 +76,11 @@ namespace IGO_font
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(21, 235);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Location = new System.Drawing.Point(16, 188);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(916, 531);
+            this.dataGridView2.Size = new System.Drawing.Size(687, 425);
             this.dataGridView2.TabIndex = 2;
             // 
             // lbl_Price
@@ -92,22 +89,20 @@ namespace IGO_font
             this.lbl_Price.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Price.Font = new System.Drawing.Font("微軟正黑體", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl_Price.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_Price.Location = new System.Drawing.Point(579, 799);
-            this.lbl_Price.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Price.Location = new System.Drawing.Point(434, 639);
             this.lbl_Price.Name = "lbl_Price";
-            this.lbl_Price.Size = new System.Drawing.Size(123, 56);
+            this.lbl_Price.Size = new System.Drawing.Size(99, 45);
             this.lbl_Price.TabIndex = 3;
             this.lbl_Price.Text = "總價:";
             // 
             // btn_CheckOut
             // 
             this.btn_CheckOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_CheckOut.BackgroundImage")));
-            this.btn_CheckOut.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_CheckOut.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_CheckOut.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_CheckOut.Location = new System.Drawing.Point(753, 799);
-            this.btn_CheckOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CheckOut.Location = new System.Drawing.Point(452, 639);
             this.btn_CheckOut.Name = "btn_CheckOut";
-            this.btn_CheckOut.Size = new System.Drawing.Size(125, 46);
+            this.btn_CheckOut.Size = new System.Drawing.Size(166, 53);
             this.btn_CheckOut.TabIndex = 4;
             this.btn_CheckOut.Text = "結帳";
             this.btn_CheckOut.UseVisualStyleBackColor = true;
@@ -115,22 +110,21 @@ namespace IGO_font
             // 
             // cmb_Payment
             // 
+            this.cmb_Payment.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cmb_Payment.FormattingEnabled = true;
-            this.cmb_Payment.Location = new System.Drawing.Point(411, 820);
-            this.cmb_Payment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_Payment.Location = new System.Drawing.Point(262, 639);
             this.cmb_Payment.Name = "cmb_Payment";
-            this.cmb_Payment.Size = new System.Drawing.Size(160, 23);
+            this.cmb_Payment.Size = new System.Drawing.Size(167, 32);
             this.cmb_Payment.TabIndex = 5;
             // 
             // btn_Leave
             // 
             this.btn_Leave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Leave.BackgroundImage")));
-            this.btn_Leave.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_Leave.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_Leave.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_Leave.Location = new System.Drawing.Point(788, 916);
-            this.btn_Leave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Leave.Location = new System.Drawing.Point(570, 726);
             this.btn_Leave.Name = "btn_Leave";
-            this.btn_Leave.Size = new System.Drawing.Size(125, 46);
+            this.btn_Leave.Size = new System.Drawing.Size(133, 35);
             this.btn_Leave.TabIndex = 6;
             this.btn_Leave.Text = "離開";
             this.btn_Leave.UseVisualStyleBackColor = true;
@@ -141,7 +135,6 @@ namespace IGO_font
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -163,10 +156,18 @@ namespace IGO_font
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView2);
             this.splitContainer1.Panel2.Controls.Add(this.btn_Leave);
             this.splitContainer1.Panel2.Controls.Add(this.lbl_Price);
-            this.splitContainer1.Size = new System.Drawing.Size(1942, 1026);
-            this.splitContainer1.SplitterDistance = 935;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Size = new System.Drawing.Size(1455, 821);
+            this.splitContainer1.SplitterDistance = 700;
             this.splitContainer1.TabIndex = 7;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(62, 639);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(167, 32);
+            this.comboBox1.TabIndex = 7;
             // 
             // label1
             // 
@@ -174,10 +175,9 @@ namespace IGO_font
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(56, 194);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(42, 155);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 38);
+            this.label1.Size = new System.Drawing.Size(86, 31);
             this.label1.TabIndex = 6;
             this.label1.Text = "購物車";
             // 
@@ -187,31 +187,20 @@ namespace IGO_font
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(25, 192);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(19, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 38);
+            this.label2.Size = new System.Drawing.Size(110, 31);
             this.label2.TabIndex = 7;
             this.label2.Text = "訂單內容";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(411, 851);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 23);
-            this.comboBox1.TabIndex = 7;
-            // 
             // CheckOut
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1942, 1026);
+            this.ClientSize = new System.Drawing.Size(1455, 821);
             this.ControlBox = false;
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CheckOut";
             this.Text = "CheckOut";
             this.Load += new System.EventHandler(this.CheckOut_Load);

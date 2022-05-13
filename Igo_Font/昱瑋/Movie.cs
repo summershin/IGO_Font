@@ -292,7 +292,7 @@ namespace IGO_font
             this.dbContext.Temps.Add(temp);
             this.dbContext.SaveChanges();
             MessageBox.Show("加入購物車成功");
-
+            this.dgv_shoppingcar.DataSource = null;
         }
     }
     public static class MovieShop
