@@ -33,12 +33,12 @@ namespace IGO_font.慶陽
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_User = new System.Windows.Forms.Button();
             this.btn_Live = new System.Windows.Forms.Button();
             this.btn_View = new System.Windows.Forms.Button();
             this.btn_Movie = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -53,6 +53,7 @@ namespace IGO_font.慶陽
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -65,8 +66,9 @@ namespace IGO_font.慶陽
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1643, 901);
-            this.splitContainer1.SplitterDistance = 212;
+            this.splitContainer1.Size = new System.Drawing.Size(1232, 721);
+            this.splitContainer1.SplitterDistance = 169;
+            this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
             // 
             // label1
@@ -76,9 +78,10 @@ namespace IGO_font.慶陽
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(1512, 91);
+            this.label1.Location = new System.Drawing.Point(1133, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 18);
+            this.label1.Size = new System.Drawing.Size(65, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "使用者名稱:";
             // 
@@ -87,6 +90,7 @@ namespace IGO_font.慶陽
             this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -103,9 +107,27 @@ namespace IGO_font.慶陽
             // 
             this.splitContainer2.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer2.Panel2.BackgroundImage")));
             this.splitContainer2.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.splitContainer2.Size = new System.Drawing.Size(1643, 685);
-            this.splitContainer2.SplitterDistance = 284;
+            this.splitContainer2.Size = new System.Drawing.Size(1232, 549);
+            this.splitContainer2.SplitterDistance = 212;
+            this.splitContainer2.SplitterWidth = 3;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(30, 481);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(142, 30);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "登出";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -115,10 +137,10 @@ namespace IGO_font.慶陽
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(21, 320);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(30, 234);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(231, 38);
+            this.button1.Size = new System.Drawing.Size(142, 30);
             this.button1.TabIndex = 9;
             this.button1.Text = "購物車";
             this.button1.UseVisualStyleBackColor = false;
@@ -132,10 +154,10 @@ namespace IGO_font.慶陽
             this.btn_User.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_User.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_User.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_User.Location = new System.Drawing.Point(21, 32);
-            this.btn_User.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_User.Location = new System.Drawing.Point(30, 298);
+            this.btn_User.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_User.Name = "btn_User";
-            this.btn_User.Size = new System.Drawing.Size(231, 38);
+            this.btn_User.Size = new System.Drawing.Size(142, 30);
             this.btn_User.TabIndex = 8;
             this.btn_User.Text = "使用者";
             this.btn_User.UseVisualStyleBackColor = false;
@@ -149,10 +171,10 @@ namespace IGO_font.慶陽
             this.btn_Live.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Live.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_Live.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Live.Location = new System.Drawing.Point(21, 248);
-            this.btn_Live.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Live.Location = new System.Drawing.Point(30, 42);
+            this.btn_Live.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Live.Name = "btn_Live";
-            this.btn_Live.Size = new System.Drawing.Size(231, 38);
+            this.btn_Live.Size = new System.Drawing.Size(142, 30);
             this.btn_Live.TabIndex = 7;
             this.btn_Live.Text = "飯店";
             this.btn_Live.UseVisualStyleBackColor = false;
@@ -166,10 +188,10 @@ namespace IGO_font.慶陽
             this.btn_View.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_View.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_View.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_View.Location = new System.Drawing.Point(21, 104);
-            this.btn_View.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_View.Location = new System.Drawing.Point(30, 170);
+            this.btn_View.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_View.Name = "btn_View";
-            this.btn_View.Size = new System.Drawing.Size(231, 38);
+            this.btn_View.Size = new System.Drawing.Size(142, 30);
             this.btn_View.TabIndex = 5;
             this.btn_View.Text = "景點";
             this.btn_View.UseVisualStyleBackColor = false;
@@ -183,39 +205,23 @@ namespace IGO_font.慶陽
             this.btn_Movie.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Movie.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_Movie.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Movie.Location = new System.Drawing.Point(21, 176);
-            this.btn_Movie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Movie.Location = new System.Drawing.Point(30, 106);
+            this.btn_Movie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Movie.Name = "btn_Movie";
-            this.btn_Movie.Size = new System.Drawing.Size(231, 38);
+            this.btn_Movie.Size = new System.Drawing.Size(142, 30);
             this.btn_Movie.TabIndex = 6;
             this.btn_Movie.Text = "電影";
             this.btn_Movie.UseVisualStyleBackColor = false;
             this.btn_Movie.Click += new System.EventHandler(this.btn_Movie_Click);
             // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(21, 457);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(231, 38);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "登出";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1643, 901);
+            this.ClientSize = new System.Drawing.Size(1232, 721);
             this.Controls.Add(this.splitContainer1);
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "HomePage";
             this.Text = "HomePage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

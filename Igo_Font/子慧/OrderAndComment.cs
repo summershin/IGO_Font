@@ -179,7 +179,7 @@ namespace IGO
                 return;
             }
 
-            else if (Cb_Star.Text == " ")
+            else if (Cb_Star.Text == "")
             {
                 MessageBox.Show("缺少必要五星評分");
                 return;

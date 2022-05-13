@@ -65,6 +65,7 @@ namespace IGO_font
                     MovieSeat reservation = new MovieSeat(limit, checkedSeats);
                     if (reservation.ShowDialog() == DialogResult.OK)
                     {
+                        MessageBox.Show("劃位成功");
                         var results = reservation.CheckedSeats;
                         aaaa = results;
                         this.checkedSeats.AddRange(results);
