@@ -81,6 +81,7 @@ namespace IGO_font.慶陽
             else if(dr == DialogResult.No)
             {
                 customer.logout = 1;
+                this.Close();
             }
 
         }

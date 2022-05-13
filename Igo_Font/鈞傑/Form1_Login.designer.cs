@@ -31,6 +31,7 @@ namespace 期中專題
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_IgoRegister = new System.Windows.Forms.Button();
             this.lbl_Phone = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@ namespace 期中專題
             this.txt_Phone = new System.Windows.Forms.TextBox();
             this.lbl_IgoPW = new System.Windows.Forms.Label();
             this.lbl_IgoLgoin = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,18 @@ namespace 期中專題
             this.panel1.Size = new System.Drawing.Size(556, 290);
             this.panel1.TabIndex = 1;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(296, 179);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(114, 29);
+            this.checkBox1.TabIndex = 5;
+            this.checkBox1.Text = "記住帳號";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // txt_password
             // 
             this.txt_password.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -66,6 +78,7 @@ namespace 期中專題
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(239, 43);
             this.txt_password.TabIndex = 4;
+            this.txt_password.UseSystemPasswordChar = true;
             // 
             // btn_IgoRegister
             // 
@@ -142,18 +155,6 @@ namespace 期中專題
             this.lbl_IgoLgoin.Size = new System.Drawing.Size(246, 47);
             this.lbl_IgoLgoin.TabIndex = 2;
             this.lbl_IgoLgoin.Text = "IGO 會員登入";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(296, 179);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(114, 29);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "記住帳號";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // Frm_Login
             // 

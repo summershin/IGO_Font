@@ -300,6 +300,7 @@ namespace IGO_font
             this.cbx_City.Name = "cbx_City";
             this.cbx_City.Size = new System.Drawing.Size(176, 41);
             this.cbx_City.TabIndex = 24;
+            this.cbx_City.SelectedIndexChanged += new System.EventHandler(this.cbx_City_SelectedIndexChanged);
             // 
             // btn_AllProduct
             // 
