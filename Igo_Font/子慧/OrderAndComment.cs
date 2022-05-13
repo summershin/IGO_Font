@@ -172,17 +172,26 @@ namespace IGO
                 return;
             }
 
-            if (Tb_Comment.Text == " ")
+
+            else if (Cb_Product.Text =="")
+            {
+                MessageBox.Show("缺少必要產品ID!");
+                return;
+            }
+
+            else if (Cb_Star.Text == " ")
+            {
+                MessageBox.Show("缺少必要五星評分");
+                return;
+            }
+
+            else  if (Tb_Comment.Text == "")
             {
                 MessageBox.Show("缺少必要評論!");
                 return;
             }
            
-            if (Cb_Star.Text == " ")
-            {
-                MessageBox.Show("缺少必要五星評分");
-                return;
-            }
+           
             
             
             string g = Cb_Product.Text.Substring(0,4);
@@ -200,7 +209,9 @@ namespace IGO
             this.dbContext.FeedbackManagements.Add(feedback);
 
             this.dbContext.SaveChanges();
-            
+            MessageBox.Show("評論存取成功!");
+
+
         }
 
 

@@ -193,7 +193,7 @@ namespace IGO
             this.Lb_CommentProduct.BackColor = System.Drawing.Color.Transparent;
             this.Lb_CommentProduct.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lb_CommentProduct.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lb_CommentProduct.Location = new System.Drawing.Point(180, 415);
+            this.Lb_CommentProduct.Location = new System.Drawing.Point(399, 432);
             this.Lb_CommentProduct.Name = "Lb_CommentProduct";
             this.Lb_CommentProduct.Size = new System.Drawing.Size(57, 25);
             this.Lb_CommentProduct.TabIndex = 5;
